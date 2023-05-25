@@ -10,7 +10,7 @@ Following the recommendation from SOURCE we fist installed the following program
 - program a
 - program b - with link
 - program c do create the image
-- Exlipes to edit Java files (why not CS code?)
+- VS Coide to edit Java files
 
 ## Creating the firmware image
 
