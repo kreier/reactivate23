@@ -36,9 +36,16 @@ We'll see about that.
 
 ## Inspiration at TAS in December 2022
 
-The visit was great. Team 4253 would like to support us - we need to make contact! They have some vintage robots to learn on, build a robot for the previous sesion by freshmen teams to learn from working desigs (see below) and run example bots with [SDS MK4i Swerve Modules](https://www.andymark.com/products/mk4i-swerve-modules), driven by eight [Talon FX](https://store.ctr-electronics.com/falcon-500-powered-by-talon-fx/):
+The visit was great. Team 4253 would like to support us - we need to make contact! They have some vintage robots to learn from:
 
+![pic 1](docs/2022-12-03_old_robots.jpg)
 
+Build a robot for the previous sesion by freshmen teams to learn from working desigs (see below) and run example bots with [SDS MK4i Swerve Modules](https://www.andymark.com/products/mk4i-swerve-modules), driven by eight [Talon FX](https://store.ctr-electronics.com/falcon-500-powered-by-talon-fx/):
+
+![pic 2](docs/2022-12-03_drivebase.jpg)
+![pic 3](docs/2022-12-03_turret.jpg)
+![pic 4](docs/2022-12-03_example-landscape.jpg)
+![pic 5](docs/2022-12-03_example-portrait.jpg)
 
 ## Start of FRC at SSIS in 2019
 
