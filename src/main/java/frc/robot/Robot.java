@@ -17,8 +17,8 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.TalonSRXFeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.*;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-import com.ctre.phoenix.sensors.PigeonIMU;
+//import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+//import com.ctre.phoenix.sensors.PigeonIMU;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -58,8 +58,8 @@ public class Robot extends TimedRobot {
   //private ColorWheelSystem colorWheelSystem;
 
   //Robot navigation 
-  private int leftEncoderReading = 159;
-  private int rightEncoderReading = 314;
+  //private int leftEncoderReading = 159;
+  //private int rightEncoderReading = 314;
   //private PigeonIMU pigeonIMU;
   //private double [] pigeonIMUData;
 
@@ -92,11 +92,11 @@ public class Robot extends TimedRobot {
 
 //Set up encoders on the left and right sides of the drive
 //
-      leftMotorControllerCIM1.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
-      leftMotorControllerCIM1.setSensorPhase(true);
-      leftMotorControllerCIM1.setSelectedSensorPosition(0);
-      rightMotorControllerCIM1.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
-      rightMotorControllerCIM1.setSelectedSensorPosition(0);
+      //leftMotorControllerCIM1.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
+      //leftMotorControllerCIM1.setSensorPhase(true);
+      //leftMotorControllerCIM1.setSelectedSensorPosition(0);
+      //rightMotorControllerCIM1.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
+      //rightMotorControllerCIM1.setSelectedSensorPosition(0);
 
 //Set up the Pigeon
       //pigeonIMU = new PigeonIMU(leftMotorControllerCIM1);
@@ -129,15 +129,15 @@ public class Robot extends TimedRobot {
     SmartDashboard.putNumber("rightMotor", rightMotorControllerCIM.get());
 
     //Show robot position data from encoders and Pigeon IMU
-    SmartDashboard.putNumber("leftEncoder",leftEncoderReading);
-    SmartDashboard.putNumber("rightEncoder",rightEncoderReading);
+    //SmartDashboard.putNumber("leftEncoder",leftEncoderReading);
+    //SmartDashboard.putNumber("rightEncoder",rightEncoderReading);
     //Nam - your code goes in the next line. Talk to Leo if you need help.
     //SmartDashboard.putNumber("Robot Heading",robotHeading);
 
 
  //**********ROBOT NAVIGATION DATA**********//
-  leftEncoderReading = leftMotorControllerCIM.getSelectedSensorPosition();
-  rightEncoderReading = rightMotorControllerCIM.getSelectedSensorPosition();
+  //leftEncoderReading = leftMotorControllerCIM.getSelectedSensorPosition();
+  //rightEncoderReading = rightMotorControllerCIM.getSelectedSensorPosition();
   //pigeonIMU.getYawPitchRoll(pigeonIMUData);
 
   //robotHeading = pigeonIMU.getFusedHeading();  
