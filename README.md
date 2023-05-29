@@ -38,6 +38,8 @@ We'll see about that.
 
 On Monday we installed the FRC Game Tools, connected to the 426 Wifi, activated the sensors, reconnected all Talon SRX to the CAN bus - and with a USB flight stick Logitech we were able to control the robot again! Some software updates for the motor controllers were needed, but with Phoenix Tuner X fast accomplished.
 
+After restarting after the installation, we started FRC Driver Station - and voila!
+
 ## Inspiration at TAS in December 2022
 
 The visit was great. Team 4253 would like to support us - we need to make contact! They have some vintage robots to learn from:
