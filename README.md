@@ -53,6 +53,12 @@ Build a robot for the previous sesion by freshmen teams to learn from working de
 ![pic 4](docs/2022-12-03_example-landscape.jpg)
 ![pic 5](docs/2022-12-03_example-portrait.jpg)
 
+## FRC at the SSIS Club Expo in August 26, 2020
+
+As noted in this [Instagram post](https://www.instagram.com/p/CEWkAkDhMu9/) the FRC robot was present with a gamepad connected to the Lenovo laptop to showcase the robot:
+
+![frx at club expo 2020](docs/2020-08-26_club_expo.jpg)
+
 ## Start of FRC at SSIS in 2019
 
 Evan Weinberg @emwdx started the collaboration with 5 other schools to bring FRC to SSIS and Vietnam. The stages are documented in the repository https://github.com/ssis-robotics/Team426Robot 
