@@ -34,6 +34,10 @@ The motors on the CAN bus need to be addressed. But how? Can we give them indivi
 
 We'll see about that.
 
+### Reactivate drive control
+
+On Monday we installed the FRC Game Tools, connected to the 426 Wifi, activated the sensors, reconnected all Talon SRX to the CAN bus - and with a USB flight stick Logitech we were able to control the robot again! Some software updates for the motor controllers were needed, but with Phoenix Tuner X fast accomplished.
+
 ## Inspiration at TAS in December 2022
 
 The visit was great. Team 4253 would like to support us - we need to make contact! They have some vintage robots to learn from:
