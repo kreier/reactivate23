@@ -92,6 +92,7 @@ public class Robot extends TimedRobot {
   //These colors have been updated with tests from March 1 in NYC
   //Each color has a decimal value for red, blue, and green in the parentheses.
   
+  // commented 2023/05/30 since .makeColor is calling an error
   private final Color kBlue = ColorMatch.makeColor(0.131,0.457,0.412);
   private final Color kGreen = ColorMatch.makeColor(0.169,0.594,0.238);
   private final Color kRed = ColorMatch.makeColor(0.542,0.347,0.112);
@@ -121,11 +122,11 @@ public class Robot extends TimedRobot {
       leftMotorControllerCIM1 = new WPI_TalonSRX(0);
       leftMotorControllerCIM2 = new WPI_TalonSRX(1);
       
-      leftMotorGroup = new SpeedControllerGroup(leftMotorControllerCIM1,leftMotorControllerCIM2);
+      leftMotorGroup = new MotorControllerGroup(leftMotorControllerCIM1,leftMotorControllerCIM2);
 
       rightMotorControllerCIM1 = new WPI_TalonSRX(2);
       rightMotorControllerCIM2 = new WPI_TalonSRX(3);
-      rightMotorGroup = new SpeedControllerGroup(rightMotorControllerCIM1,rightMotorControllerCIM2);
+      rightMotorGroup = new MotorControllerGroup(rightMotorControllerCIM1,rightMotorControllerCIM2);
 
 //Create a differential drive system using the left and right motor groups
       m_myRobot = new DifferentialDrive(leftMotorGroup, rightMotorGroup);
@@ -144,7 +145,7 @@ public class Robot extends TimedRobot {
 //Set up climb motor controllers
       climbMotorCIM1 = new WPI_TalonSRX(10);
       climbMotorCIM2 = new WPI_TalonSRX(11);
-      climbMotorGroup = new SpeedControllerGroup(climbMotorCIM1,climbMotorCIM2);
+      climbMotorGroup = new MotorControllerGroup(climbMotorCIM1,climbMotorCIM2);
 
 //Set up the color wheel system motor controllers
       colorWheelDrive = new WPI_VictorSPX(8);
@@ -484,16 +485,16 @@ if(climbMotorEnabled){
   }
 private string color90Degrees(string colorOfficial) {
 	if (colorOfficial == "R") {
-		return "Blue"
+		return "Blue";
 	}
 	else if (colorOfficial == "G") {
-		return "Yellow"
+		return "Yellow";
 	}
 	else if (colorOfficial == "Y") {
-		return "Green"
+		return "Green";
 	}
 	else {
-		return "Red"
+		return "Red";
 	}
 }
 }
