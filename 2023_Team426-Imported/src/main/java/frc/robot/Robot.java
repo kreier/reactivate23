@@ -9,8 +9,10 @@ package frc.robot;
 
 
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.GenericHID.Hand;
-import edu.wpi.first.wpilibj.SpeedControllerGroup;
+import edu.wpi.first.wpilibj.GenericHID.HIDType;
+// import edu.wpi.first.wpilibj.GenericHID.Hand;
+import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
+// import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.*;
 
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
@@ -22,7 +24,7 @@ import com.ctre.phoenix.sensors.PigeonIMU;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.GenericHID.Hand;
+// import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -49,17 +51,17 @@ public class Robot extends TimedRobot {
   private WPI_TalonSRX rightMotorControllerCIM2;
   
 
-  private SpeedControllerGroup leftMotorGroup;
-  private SpeedControllerGroup rightMotorGroup;
+  private MotorControllerGroup leftMotorGroup;
+  private MotorControllerGroup rightMotorGroup;
 
 
   private WPI_VictorSPX conveyorMotorCIM1;
   private WPI_VictorSPX conveyorMotorCIM2;
-  private SpeedControllerGroup conveyorMotorGroup;
+  private MotorControllerGroup conveyorMotorGroup;
 
   private WPI_TalonSRX climbMotorCIM1;
   private WPI_TalonSRX climbMotorCIM2;
-  private SpeedControllerGroup climbMotorGroup;
+  private MotorControllerGroup climbMotorGroup;
 
   private DigitalInput colorWheelArmLowerLimit;
   private DigitalInput colorWheelArmUpperLimit;
