@@ -9,15 +9,15 @@ package frc.robot;
 
 
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.GenericHID.HIDType;
+// import edu.wpi.first.wpilibj.GenericHID.HIDType;  // unused
 // import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 // import edu.wpi.first.wpilibj.SpeedControllerGroup;
-import edu.wpi.first.wpilibj.*;
+// import edu.wpi.first.wpilibj.*;
 
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
-import com.ctre.phoenix.motorcontrol.TalonSRXFeedbackDevice;
-import com.ctre.phoenix.motorcontrol.can.*;
+// import com.ctre.phoenix.motorcontrol.TalonSRXFeedbackDevice;
+// import com.ctre.phoenix.motorcontrol.can.*;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import com.ctre.phoenix.sensors.PigeonIMU;
@@ -32,7 +32,10 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj.I2C;
 
-import com.revrobotics.*;
+import com.revrobotics.ColorSensorV3;
+import com.revrobotics.ColorMatch;
+import com.revrobotics.ColorMatchResult;
+// import com.revrobotics.*;
 
 
 public class Robot extends TimedRobot {
@@ -57,7 +60,7 @@ public class Robot extends TimedRobot {
 
   private WPI_VictorSPX conveyorMotorCIM1;
   private WPI_VictorSPX conveyorMotorCIM2;
-  private MotorControllerGroup conveyorMotorGroup;
+  // private MotorControllerGroup conveyorMotorGroup;
 
   private WPI_TalonSRX climbMotorCIM1;
   private WPI_TalonSRX climbMotorCIM2;
@@ -69,8 +72,8 @@ public class Robot extends TimedRobot {
   private WPI_VictorSPX colorWheelArm;
 
   private int moveColorWheelUpDown = 1;
-  private int colorWheelState = 1;
-  private Boolean lastPressed = true;
+  // private int colorWheelState = 1;
+  // private Boolean lastPressed = true;
   private Boolean operatorGamepadLeftTriggerPressed = false;
   private String colorWheelPosition = "DOWN";
   
@@ -93,10 +96,14 @@ public class Robot extends TimedRobot {
   //Each color has a decimal value for red, blue, and green in the parentheses.
   
   // commented 2023/05/30 since .makeColor is calling an error
-  private final Color kBlue = ColorMatch.makeColor(0.131,0.457,0.412);
-  private final Color kGreen = ColorMatch.makeColor(0.169,0.594,0.238);
-  private final Color kRed = ColorMatch.makeColor(0.542,0.347,0.112);
-  private final Color kYellow = ColorMatch.makeColor(0.323,0.565,0.113);
+  private final Color kBlue = Color.kBlue;
+  private final Color kGreen = Color.kGreen;
+  private final Color kRed = Color.kRed;
+  private final Color kYellow = Color.kYellow;
+  // private final Color kBlue = ColorMatch.makeColor(0.131,0.457,0.412);
+  // private final Color kGreen = ColorMatch.makeColor(0.169,0.594,0.238);
+  // private final Color kRed = ColorMatch.makeColor(0.542,0.347,0.112);
+  // private final Color kYellow = ColorMatch.makeColor(0.323,0.565,0.113);
 
   private int kColorChangesForStageTwo = 32;
   private boolean stageTwoComplete = false;
@@ -219,7 +226,7 @@ public class Robot extends TimedRobot {
     SmartDashboard.putBoolean("colorWheelArmLowerLimit", colorWheelArmUpperLimit.get());
     SmartDashboard.putString("colorWheelPosition", colorWheelPosition);
     SmartDashboard.putBoolean("stageTwoComplete", stageTwoComplete);
-    SmartDashboard.putString("colorWheelTargetColor", colorWheelTargetColor);
+    // SmartDashboard.putString("colorWheelTargetColor", colorWheelTargetColor);
 
     //Show color sensor information
     SmartDashboard.putNumber("Red",detectedColor.red);
@@ -443,8 +450,8 @@ if(climbMotorEnabled){
 }
 
  //**********ROBOT NAVIGATION DATA**********//
-  leftEncoderReading = leftMotorControllerCIM2.getSelectedSensorPosition();
-  rightEncoderReading = rightMotorControllerCIM1.getSelectedSensorPosition();
+  leftEncoderReading = (int) leftMotorControllerCIM2.getSelectedSensorPosition();
+  rightEncoderReading = (int) rightMotorControllerCIM1.getSelectedSensorPosition();
   pigeonIMU.getYawPitchRoll(pigeonIMUData);
 
   robotHeading = pigeonIMU.getFusedHeading();  
@@ -483,20 +490,22 @@ if(climbMotorEnabled){
       return -number;
     }
   }
-private string color90Degrees(string colorOfficial) {
-	if (colorOfficial == "R") {
-		return "Blue";
-	}
-	else if (colorOfficial == "G") {
-		return "Yellow";
-	}
-	else if (colorOfficial == "Y") {
-		return "Green";
-	}
-	else {
-		return "Red";
-	}
-}
+
+  // never really used - commented 2023/05/30
+  // private String color90Degrees(String colorOfficial) {
+  //   if (colorOfficial == "R") {
+  //     return "Blue";
+  //   }
+  //   else if (colorOfficial == "G") {
+  //     return "Yellow";
+  //   }
+  //   else if (colorOfficial == "Y") {
+  //     return "Green";
+  //   }
+  //   else {
+  //     return "Red";
+  //   }
+  // }
 }
 
 
