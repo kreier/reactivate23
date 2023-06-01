@@ -19,7 +19,7 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 // import com.ctre.phoenix.motorcontrol.TalonSRXFeedbackDevice;
 // import com.ctre.phoenix.motorcontrol.can.*;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+// import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import com.ctre.phoenix.sensors.PigeonIMU;
 
 import edu.wpi.first.wpilibj.Timer;
@@ -27,15 +27,15 @@ import edu.wpi.first.wpilibj.TimedRobot;
 // import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.DigitalInput;
+// import edu.wpi.first.wpilibj.DigitalInput;
 
-import edu.wpi.first.wpilibj.util.Color;
-import edu.wpi.first.wpilibj.I2C;
+// import edu.wpi.first.wpilibj.util.Color;
+// import edu.wpi.first.wpilibj.I2C;
 
-import com.revrobotics.ColorSensorV3;
-import com.revrobotics.ColorMatch;
-import com.revrobotics.ColorMatchResult;
-// import com.revrobotics.*;
+// import com.revrobotics.ColorSensorV3;
+// import com.revrobotics.ColorMatch;
+// import com.revrobotics.ColorMatchResult;
+// // import com.revrobotics.*;
 
 
 public class Robot extends TimedRobot {
@@ -45,7 +45,7 @@ public class Robot extends TimedRobot {
 
   //Define controllers.
   private XboxController gamepadDrive;
-  private XboxController gamepadOperator;
+  // private XboxController gamepadOperator;
 
 
   private WPI_TalonSRX leftMotorControllerCIM1;
@@ -141,7 +141,7 @@ public class Robot extends TimedRobot {
 
 //Set up the two Xbox controllers. The drive is for driving, the operator is for all conveyor and color wheel controls
       gamepadDrive = new XboxController(0);
-      gamepadOperator = new XboxController(1);
+      // gamepadOperator = new XboxController(1);
 
      
 //Set up conveyor motor controllers
@@ -175,12 +175,12 @@ public class Robot extends TimedRobot {
 
 
 //Set up encoders on the left and right sides of the drive
-//
-//       leftMotorControllerCIM2.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
-//       leftMotorControllerCIM2.setSensorPhase(true);
-//       leftMotorControllerCIM2.setSelectedSensorPosition(0);
-//       rightMotorControllerCIM1.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
-//       rightMotorControllerCIM1.setSelectedSensorPosition(0);
+
+      leftMotorControllerCIM2.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
+      leftMotorControllerCIM2.setSensorPhase(true);
+      leftMotorControllerCIM2.setSelectedSensorPosition(0);
+      rightMotorControllerCIM1.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder); 
+      rightMotorControllerCIM1.setSelectedSensorPosition(0);
 
 //Set up the Pigeon
 //       pigeonIMU = new PigeonIMU(leftMotorControllerCIM1); // that is leftMotorControllerCIM1 = new WPI_TalonSRX(0)
@@ -239,8 +239,8 @@ public class Robot extends TimedRobot {
 //     SmartDashboard.putNumber("numberOfColorChanges", numberOfColorChanges);
 
     //Show robot position data from encoders and Pigeon IMU
-//     SmartDashboard.putNumber("leftEncoder",leftEncoderReading);
-//     SmartDashboard.putNumber("rightEncoder",rightEncoderReading);
+    SmartDashboard.putNumber("leftEncoder",leftEncoderReading);
+    SmartDashboard.putNumber("rightEncoder",rightEncoderReading);
     //Nam - your code goes in the next line. Talk to Leo if you need help.
     SmartDashboard.putNumber("Robot Heading",robotHeading);
 //**********CONVEYOR CONTROL**********//
