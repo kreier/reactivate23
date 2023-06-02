@@ -37,6 +37,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 // import com.revrobotics.ColorMatchResult;
 // // import com.revrobotics.*;
 
+import edu.wpi.first.wpilibj.DutyCycle;
 
 public class Robot extends TimedRobot {
   private DifferentialDrive m_myRobot;
@@ -117,7 +118,9 @@ public class Robot extends TimedRobot {
   private double [] pigeonIMUData;
 
   private double robotHeading;
-  
+
+  private DutyCycle controller;
+
   //Pixy variables
   //private Pixy2 pixy;
 
@@ -143,7 +146,8 @@ public class Robot extends TimedRobot {
       gamepadDrive = new XboxController(0);
       // gamepadOperator = new XboxController(1);
 
-     
+controller = new DutyCycle(1);
+
 //Set up conveyor motor controllers
 //       conveyorMotorCIM1 = new WPI_VictorSPX(6);
 //       conveyorMotorCIM2 = new WPI_VictorSPX(7);
@@ -217,6 +221,7 @@ public class Robot extends TimedRobot {
 //This line sends things to the smart dashboard. We can use this to get any information we might want from the system.
     SmartDashboard.putNumber("leftMotor", leftMotorControllerCIM1.get());
     SmartDashboard.putNumber("rightMotor", rightMotorControllerCIM1.get());
+    SmartDashboard.putNumber("controller", controller.getOutput());    
 //     SmartDashboard.putNumber("conveyorMotor", conveyorMotorCIM1.get());
 //     SmartDashboard.putNumber("climbMotor", climbMotorCIM1.get());
 //     SmartDashboard.putBoolean("climbMotorEnabled",climbMotorEnabled);
