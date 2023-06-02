@@ -3,7 +3,7 @@ Restarting FRC in 2023
 
 The software on the Windows machine was lost, so we had to start from scratch to get a firmware image for the robotRIO and resurrect the FRC robot built by Team 426.
 
-We have an [AM14U5 drive base](https://www.andymark.com/pages/bundles-drive-systems-bases-chassis-am14u-family-chassis-am14u5) - and it is a great starting point. [Swerve modules](https://www.andymark.com/products/mk4i-swerve-modules) might come later.
+We have an [AM14U4 drive base](https://www.andymark.com/products/am14u-family-frame-opening-kit) - and it is a great starting point. [Swerve modules](https://www.andymark.com/products/mk4i-swerve-modules) might come later.
 
 ## Get the required programs
 
